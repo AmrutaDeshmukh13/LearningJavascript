@@ -1,8 +1,8 @@
 questionName(401);
 function questionName(input) {
   // ADD YOUR CODE HERE
-  var status = 200;
-  var answer;
+  let status = 200;
+  let answer;
   switch (input) {
     case 200:
       answer = "PASS - OK: Request successful";

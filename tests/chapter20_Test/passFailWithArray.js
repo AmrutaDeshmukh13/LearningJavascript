@@ -41,7 +41,7 @@ if (failed === 0) {
 }
 
 // Print Report
-console.log("===== TEST EXECUTION REPORT =====");
+console.log("= TEST EXECUTION REPORT =");
 console.log(`Total Tests : ${totalTests}`);
 console.log(`Passed      : ${passed}`);
 console.log(`Failed      : ${failed}`);
