@@ -1,0 +1,53 @@
+const input = [
+  "pass",
+  "fail",
+  "pass",
+  "skip",
+  "pass",
+  "fail",
+  "pass",
+  "pass"
+];
+questionName(input);
+function questionName(input) {
+  // ADD YOUR CODE HERE
+  let passed = 0;
+let failed = 0;
+let skipped = 0;
+
+// Count test results
+for (let i = 0; i < input.length; i++) {
+  if (input[i] === "pass") {
+    passed++;
+  } else if (input[i] === "fail") {
+    failed++;
+  } else if (input[i] === "skip") {
+    skipped++;
+  }
+}
+
+const totalTests = input.length;
+const passRate = ((passed / totalTests) * 100).toFixed(2);
+
+// Determine verdict
+let verdict;
+
+if (failed === 0) {
+  verdict = "Ready for Release";
+} else if (failed <= 2) {
+  verdict = "Review Required";
+} else {
+  verdict = "Block Release";
+}
+
+// Print Report
+console.log("===== TEST EXECUTION REPORT =====");
+console.log(`Total Tests : ${totalTests}`);
+console.log(`Passed      : ${passed}`);
+console.log(`Failed      : ${failed}`);
+console.log(`Skipped     : ${skipped}`);
+console.log(`Pass Rate   : ${passRate}%`);
+console.log(`Verdict     : ${verdict}`);
+
+}
+
